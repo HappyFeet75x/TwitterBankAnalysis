@@ -1,0 +1,8 @@
+CKME 136
+Jan. 25, 2016
+Hedel Torres
+	
+Abstract Assignment:
+
+Classification and sentiment analysis, using Twitter data, will be used to identify client sentiment relating to financial institutions across Canada, specifically TD and its competitors.  An attempt will be made to identify emerging client financial needs, such as new products and services, as well as opportunities for improvements.  Findings will be classified by geographic regions to identify potential markets and gaps.
+Analysis will be performed by identifying keywords, phrases and metadata found within Tweets. Hadoop, Hive/Pig and possibly R will be used to store, query and perform analytics on the data.
