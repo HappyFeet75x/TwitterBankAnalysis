@@ -1,0 +1,22 @@
+#Install pip
+sudo easy_install pip
+sudo pip install requests
+sudo easy_install tweepy
+
+sudo easy_install tweepy
+sudo pip install jsonpickle
+
+pip install tweepy
+pip install jsonpickle
+
+os.chdir("/Users/hedeltorres/dropbox/")
+
+os.getcwd()
+os.listdir("path")
+
+#in Python
+import tweepy
+import sys
+import jsonpickle
+
+python twitter_csv3.py
