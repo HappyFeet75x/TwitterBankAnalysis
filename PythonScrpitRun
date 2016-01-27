@@ -19,4 +19,6 @@ import tweepy
 import sys
 import jsonpickle
 
+#Create an App Account at https://apps.twitter.com to get a key and code for your script.
+
 python twitter_csv3.py
