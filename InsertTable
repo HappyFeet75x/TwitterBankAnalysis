@@ -1,0 +1,1 @@
+INSERT INTO tablename1 select columnlist FROM secondtable;
