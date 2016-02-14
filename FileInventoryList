@@ -1,0 +1,62 @@
+Files Inventory				
+#	Bank	File	Size MB (unless otherwise stated)	Table Name
+F001	Banks	banking-1-26-16.txt	424	Bank_F001
+F002	Banks	bankingfail-1-27-16.txt	10 KB	Bank_F002
+F003	Banks	bankingfail-2-7-16.txt	0	Bank_F003
+F004	Banks	bankingfail-2-14-16.txt		Bank_F004
+F005	Banks	Banks-1-26-16.txt	652.6	Bank_F005
+F006	Banks	banks-2-7-16.txt	32.9	Bank_F006
+F007	Banks	banks-2-14-16.txt		Bank_F007
+F008	Banks	better_bank-1-27-16.txt	16.7	Bank_F008
+F009	Banks	better_bank-2-7-16.txt	0	Bank_F009
+F010	Banks	better_bank-2-14-16.txt		Bank_F010
+F011	Banks	betterbank-1-27-16.txt	42 KB	Bank_F011
+F012	Banks	betterbank-2-7-16.txt	0	Bank_F012
+F013	Banks	betterbank-2-14-16.txt		Bank_F013
+F014	Banks	canadianbanks-1-27-16.txt	7 KB	Bank_F014
+F015	Banks	canadianbanks-2-7-16.txt	15 KB	Bank_F015
+F016	Banks	canadianbanks-2-14-16.txt		Bank_F016
+F017	Banks	revisedbanking-2-7-16.txt	13.1	Bank_F017
+F018	Banks	revisedbanking-2-14-16.txt		Bank_F018
+F019	Banks	wishbanks-1-27-16.txt	3.6	Bank_F019
+F020	Banks	wishbanks-2-7-16.txt	0	Bank_F020
+F021	Banks	wishbanks-2-14-16.txt		Bank_F021
+F022	BMO	BMO-1-26-16.txt	52.9	BMO_F022
+F023	BMO	BMO-2-7-16.txt	63.8	BMO_F023
+F024	BMO	BMO-2-14-16.txt		BMO_F024
+F025	CIBC	CIBC-1-26-16.txt	17.7	CIBC_F025
+F026	CIBC	CIBC-2-7-16.txt	19.7	CIBC_F026
+F027	CIBC	CIBC-2-14-16.txt		CIBC_F027
+F028	PCF	pcfinancial-1-28-16.txt	706 KB	PCF_F028
+F029	PCF	pcfinancial-2-7-16.txt	608 KB	PCF_F029
+F030	PCF	pcfinancial-2-14-16.txt		PCF_F030
+F031	RBC	rbc_canada-1-28-16.txt	7.7	RBC_F031
+F032	RBC	rbc_canada-2-7-16.txt	6.6	RBC_F032
+F033	RBC	rbc_canada-2-14-16.txt		RBC_F033
+F034	RBC	rbc-1-28-16.txt	371.9	RBC_F034
+F035	RBC	rbc-2-7-16.txt	210.2	RBC_F035
+F036	RBC	rbc-2-14-16.txt		RBC_F036
+F037	RBC	royalbank-1-28-16.txt	105 KB	RBC_F037
+F038	RBC	royalbank-2-7-16.txt	288 KB	RBC_F038
+F039	RBC	royalbank-2-14-16.txt		RBC_F039
+F040	Scotia	Scotiabank-1-26-16.txt	31.5	Scot_F040
+F041	Scotia	scotiabank-2-7-16.txt	35.5	Scot_F041
+F042	Scotia	scotiabank-2-14-16.txt		Scot_F042
+F043	Tangerine	tangerinebank-1-28-16.txt	15.3	Tang_F043
+F044	Tangerine	tangerinebank-2-7-16.txt	1.7	Tang_F044
+F045	Tangerine	tangerinebank-2-14-16.txt		Tang_F045
+F046	TD	td_banks-1-27-16.txt	555 KB	TD_F046
+F047	TD	td_bank-2-7-16.txt	16.5	TD_F047
+F048	TD	td_bank-2-14-16.txt		TD_F048
+F049	TD	td_canada-1-28-16.txt	36.3	TD_F049
+F050	TD	td_canada-2-7-16.txt	59.9	TD_F050
+F051	TD	td_canada-2-14-16.txt		TD_F051
+F052	TD	tdcanadatrust-1-26-16.txt	1.2	TD_F052
+F053	TD	tdcanadatrust-2-7-16.txt	2.5	TD_F053
+F054	TD	tdcanadatrust-2-14-16.txt		TD_F054
+F055	TD	TDCT-1-26-16.txt	143 KB	TD_F055
+F056	TD	TDCT-2-7-16.txt	222 KB	TD_F056
+F057	TD	TDCT-2-14-16.txt		TD_F057
+F058	TD	TD-1-26-16.txt	341	TD_F058
+F059	TD	TD-2-7-16.txt	123.6	TD_F059
+F060	TD	TD-2-14-16.txt		TD_F060
