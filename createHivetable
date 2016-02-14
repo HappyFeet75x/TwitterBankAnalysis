@@ -1,0 +1,39 @@
+#banking-1-26-16.txt
+#Bank_F001
+hadoop fs -put banking-1-26-16.txt /user/lab
+hadoop fs -cat /user/lab/banking-1-26-16.txt | head -n 1
+Hive
+CREATE TABLE Bank_F001 (json string);
+LOAD DATA LOCAL INPATH 'banking-1-26-16.txt' INTO TABLE Bank_F001;
+
+drop table Bank_F001_table;
+create table Bank_F001_table as
+select
+    get_json_object(Bank_F001.json, '$.text') as text,
+    get_json_object(Bank_F001.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(Bank_F001.json, '$.id') as id,
+    get_json_object(Bank_F001.json, '$.favorite_count') as favorite_count,
+    get_json_object(Bank_F001.json, '$.coordinates') as coordinates,
+    get_json_object(Bank_F001.json, '$.id_str') as id_str,
+    get_json_object(Bank_F001.json, '$.indices') as indices,
+    get_json_object(Bank_F001.json, '$.type') as type,
+    get_json_object(Bank_F001.json, '$.hashtags') as hashtags,
+    get_json_object(Bank_F001.json, '$.user_mentions') as user_mentions,
+    get_json_object(Bank_F001.json, '$.screen_name') as screen_name,
+    get_json_object(Bank_F001.json, '$.name') as name,
+    get_json_object(Bank_F001.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(Bank_F001.json, '$.retweet_count') as retweet_count,
+    get_json_object(Bank_F001.json, '$.favorited') as favorited,
+    get_json_object(Bank_F001.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(Bank_F001.json, '$.user') as user,
+    get_json_object(Bank_F001.json, '$.followers_count') as followers_count,
+    get_json_object(Bank_F001.json, '$.statuses_count') as statuses_count,
+    get_json_object(Bank_F001.json, '$.description') as description,
+    get_json_object(Bank_F001.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(Bank_F001.json, '$.favourites_count') as favourites_count,
+    get_json_object(Bank_F001.json, '$.created_at') as created_at,
+    get_json_object(Bank_F001.json, '$.time_zone') as time_zone,
+    get_json_object(Bank_F001.json, '$.listed_count') as listed_count,
+    get_json_object(Bank_F001.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from Bank_F001;
+select * from Bank_F001_table limit 1;
