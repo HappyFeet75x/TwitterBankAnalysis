@@ -1,0 +1,144 @@
+#Install pip
+sudo easy_install pip
+sudo pip install requests
+sudo easy_install tweepy
+
+sudo easy_install tweepy
+sudo pip install jsonpickle
+
+pip install tweepy
+pip install jsonpickle
+
+os.chdir("/Users/hedeltorres/dropbox/")
+
+os.getcwd()
+os.listdir("path")
+
+#in Python
+import tweepy
+import sys
+import jsonpickle
+
+python twitter_csv3.py
+
+cd /home
+cd lab
+cat TDCT.txt | head -1
+hadoop fs -put TDCT.txt /user/lab
+hadoop fs -cat /user/lab/TDCT.txt | head -n 5
+
+create database BANK;
+CREATE TABLE tdct_table (json string);
+LOAD DATA LOCAL INPATH 'TDCT.txt' INTO TABLE tdct_table;  
+
+
+create table tdct_table2 as
+select get_json_object(TDCT_table.json, '$.user') as user,
+    get_json_object(TDCT_table.json, '$.created_at') as date,
+    get_json_object(TDCT_table.json, '$.time_zone') as tz,
+    get_json_object(TDCT_table.json, '$.id') as id,
+    get_json_object(TDCT_table.json, '$.text') as text,
+    get_json_object(TDCT_table.json, '$.country') as country,
+    get_json_object(TDCT_table.json, '$.location') as location,
+    get_json_object(TDCT_table.json, '$.place') as place,
+    get_json_object(TDCT_table.json, '$.coordinates') as coord
+from TDCT_table;
+
+
+create table tdct_table2 as
+select 
+    get_json_object(TDCT_table.json, '$.text') as text,
+    get_json_object(TDCT_table.json, '$.country') as country,
+    get_json_object(TDCT_table.json, '$.location') as location,
+    get_json_object(TDCT_table.json, '$.place') as place,
+    get_json_object(TDCT_table.json, '$.coordinates') as coord
+from TDCT_table;
+
+
+select * from tdct_table2 limit 20;
+
+create table tweetbreakout as
+    select text, regexp_extract(lower(tweet_element), '(.*)@user_(\\S{8})([:| ])(.*)',2) as mention from tdct_table2
+    lateral view explode(split(tweet, '\\s')) tmp as tweet element
+    where trim(regexp_extract(lower(tweet_element), '(.*)
+
+
+create table word_count as
+select word, count(1) as cnt from
+(select explode(split(text, '\\s+')) as word from tdct_table2) w
+group by word
+order by cnt desc;
+
+
+create database TDtest;
+CREATE TABLE tdtest (json string);
+LOAD DATA LOCAL INPATH 'comb_td_canada.txt' INTO TABLE tdtest;
+
+create table tdtest_table as
+select get_json_object(tdtest.json, '$.user') as user,
+    get_json_object(tdtest.json, '$.created_at') as date,
+    get_json_object(tdtest.json, '$.time_zone') as tz,
+    get_json_object(tdtest.json, '$.id') as id,
+    get_json_object(tdtest.json, '$.text') as text,
+    get_json_object(tdtest.json, '$.country') as country,
+    get_json_object(tdtest.json, '$.location') as location,
+    get_json_object(tdtest.json, '$.place') as place,
+    get_json_object(tdtest.json, '$.coordinates') as coord
+from tdtest;
+
+drop table word_count;
+create table word_count as
+select word, count(1) as cnt from
+(select explode(split(text, '\\s+')) as word from tdtest_table) w
+group by word
+order by cnt desc;
+
+
+test with TD - too much other stuff... Touch Down, Tower Defence, other countries, other languages
+CREATE TABLE td_sample (json string);
+LOAD DATA LOCAL INPATH 'TD.txt' INTO TABLE td_sample;
+
+drop table td_sample_table;
+create table td_sample_table as
+select get_json_object(td_sample.json, '$.user') as user,
+    get_json_object(td_sample.json, '$.created_at') as date,
+    get_json_object(td_sample.json, '$.time_zone') as tz,
+    get_json_object(td_sample.json, '$.id_str') as id_str,
+    get_json_object(td_sample.json, '$.text') as text,
+    get_json_object(td_sample.json, '$.country') as country,
+    get_json_object(td_sample.json, '$.location') as location,
+    get_json_object(td_sample.json, '$.place') as place,
+    get_json_object(td_sample.json, '$.coordinates') as coord
+from td_sample;
+
+#change the below so that it converts all to lower case.
+drop table word_count;
+create table word_count as
+select word, count(1) as cnt from
+(select explode(split(text, '\\s+')) as word from td_sample_table) w
+group by word
+order by cnt desc limit 1000;
+select * from word_count;
+
+drop table coord_count;
+create table coord_count as
+select coord, count(1) as cnt from td_sample_table
+group by coord
+order by cnt desc limit 1000;
+
+drop table coord_count;
+create table coord_count as
+select coord, count(1) as cnt from td_sample_table
+group by coord
+order by cnt desc limit 1000;
+
+select * from word_count;
+#hive -e 'select * from word_count' > /home/word_count_test3.csv
+hive -e 'select * from word_count' > /home/word_count_test2.txt
+save as .txt - better for excel table
+
+# don't use
+#hive -e 'set hive.cli.print.header=true; select * from word_count' | sed 's/[\t]/,/g'  > /home/word_count_test2.txt
+
+Reminder, change table to all lowercase.  "The" and "the" are treated as different words.
+
