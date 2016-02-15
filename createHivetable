@@ -154,3 +154,65 @@ select
 from Bank_F005;
 select * from Bank_F005_table limit 1;
 
+create table Bank_F006_table as
+select
+    get_json_object(Bank_F006.json, '$.text') as text,
+    get_json_object(Bank_F006.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(Bank_F006.json, '$.id') as id,
+    get_json_object(Bank_F006.json, '$.favorite_count') as favorite_count,
+    get_json_object(Bank_F006.json, '$.coordinates') as coordinates,
+    get_json_object(Bank_F006.json, '$.id_str') as id_str,
+    get_json_object(Bank_F006.json, '$.indices') as indices,
+    get_json_object(Bank_F006.json, '$.type') as type,
+    get_json_object(Bank_F006.json, '$.hashtags') as hashtags,
+    get_json_object(Bank_F006.json, '$.user_mentions') as user_mentions,
+    get_json_object(Bank_F006.json, '$.screen_name') as screen_name,
+    get_json_object(Bank_F006.json, '$.name') as name,
+    get_json_object(Bank_F006.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(Bank_F006.json, '$.retweet_count') as retweet_count,
+    get_json_object(Bank_F006.json, '$.favorited') as favorited,
+    get_json_object(Bank_F006.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(Bank_F006.json, '$.user') as user,
+    get_json_object(Bank_F006.json, '$.followers_count') as followers_count,
+    get_json_object(Bank_F006.json, '$.statuses_count') as statuses_count,
+    get_json_object(Bank_F006.json, '$.description') as description,
+    get_json_object(Bank_F006.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(Bank_F006.json, '$.favourites_count') as favourites_count,
+    get_json_object(Bank_F006.json, '$.created_at') as created_at,
+    get_json_object(Bank_F006.json, '$.time_zone') as time_zone,
+    get_json_object(Bank_F006.json, '$.listed_count') as listed_count,
+    get_json_object(Bank_F006.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from Bank_F006;
+select * from Bank_F006_table limit 1;
+
+create table Bank_F007_table as
+select
+    get_json_object(Bank_F007.json, '$.text') as text,
+    get_json_object(Bank_F007.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(Bank_F007.json, '$.id') as id,
+    get_json_object(Bank_F007.json, '$.favorite_count') as favorite_count,
+    get_json_object(Bank_F007.json, '$.coordinates') as coordinates,
+    get_json_object(Bank_F007.json, '$.id_str') as id_str,
+    get_json_object(Bank_F007.json, '$.indices') as indices,
+    get_json_object(Bank_F007.json, '$.type') as type,
+    get_json_object(Bank_F007.json, '$.hashtags') as hashtags,
+    get_json_object(Bank_F007.json, '$.user_mentions') as user_mentions,
+    get_json_object(Bank_F007.json, '$.screen_name') as screen_name,
+    get_json_object(Bank_F007.json, '$.name') as name,
+    get_json_object(Bank_F007.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(Bank_F007.json, '$.retweet_count') as retweet_count,
+    get_json_object(Bank_F007.json, '$.favorited') as favorited,
+    get_json_object(Bank_F007.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(Bank_F007.json, '$.user') as user,
+    get_json_object(Bank_F007.json, '$.followers_count') as followers_count,
+    get_json_object(Bank_F007.json, '$.statuses_count') as statuses_count,
+    get_json_object(Bank_F007.json, '$.description') as description,
+    get_json_object(Bank_F007.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(Bank_F007.json, '$.favourites_count') as favourites_count,
+    get_json_object(Bank_F007.json, '$.created_at') as created_at,
+    get_json_object(Bank_F007.json, '$.time_zone') as time_zone,
+    get_json_object(Bank_F007.json, '$.listed_count') as listed_count,
+    get_json_object(Bank_F007.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from Bank_F007;
+select * from Bank_F007_table limit 1;
+
