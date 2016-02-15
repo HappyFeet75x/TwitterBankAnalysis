@@ -1,0 +1,7 @@
+drop table Bank_F001_wc;
+create table Bank_F001_wc as
+select word, count(1) as cnt from
+(select explode(split(lower(text), '\\s+')) as word from Bank_F001_table) w
+group by word
+order by cnt desc;
+select * from Bank_F001_wc limit 1000;
