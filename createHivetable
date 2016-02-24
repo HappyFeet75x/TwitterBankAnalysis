@@ -464,3 +464,564 @@ select
 from Bank_F015;
 select * from Bank_F015_table limit 1;
 
+#F015-F049 on seperate file
+
+CREATE TABLE Bank_F049 (json string);
+LOAD DATA LOCAL INPATH 'banking-2-21-16.txt' INTO TABLE Bank_F049;
+
+drop table Bank_F049_table;
+create table Bank_F049_table as
+select
+    get_json_object(Bank_F049.json, '$.text') as text,
+    get_json_object(Bank_F049.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(Bank_F049.json, '$.id') as id,
+    get_json_object(Bank_F049.json, '$.favorite_count') as favorite_count,
+    get_json_object(Bank_F049.json, '$.coordinates') as coordinates,
+    get_json_object(Bank_F049.json, '$.id_str') as id_str,
+    get_json_object(Bank_F049.json, '$.indices') as indices,
+    get_json_object(Bank_F049.json, '$.type') as type,
+    get_json_object(Bank_F049.json, '$.hashtags') as hashtags,
+    get_json_object(Bank_F049.json, '$.user_mentions') as user_mentions,
+    get_json_object(Bank_F049.json, '$.screen_name') as screen_name,
+    get_json_object(Bank_F049.json, '$.name') as name,
+    get_json_object(Bank_F049.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(Bank_F049.json, '$.retweet_count') as retweet_count,
+    get_json_object(Bank_F049.json, '$.favorited') as favorited,
+    get_json_object(Bank_F049.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(Bank_F049.json, '$.user') as user,
+    get_json_object(Bank_F049.json, '$.followers_count') as followers_count,
+    get_json_object(Bank_F049.json, '$.statuses_count') as statuses_count,
+    get_json_object(Bank_F049.json, '$.description') as description,
+    get_json_object(Bank_F049.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(Bank_F049.json, '$.favourites_count') as favourites_count,
+    get_json_object(Bank_F049.json, '$.created_at') as created_at,
+    get_json_object(Bank_F049.json, '$.time_zone') as time_zone,
+    get_json_object(Bank_F049.json, '$.listed_count') as listed_count,
+    get_json_object(Bank_F049.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from Bank_F049;
+select * from Bank_F049_table limit 1;
+
+CREATE TABLE Bank_F050 (json string);
+LOAD DATA LOCAL INPATH 'bankingfail-2-21-16.txt' INTO TABLE Bank_F050;
+
+drop table Bank_F050_table;
+create table Bank_F050_table as
+select
+    get_json_object(Bank_F050.json, '$.text') as text,
+    get_json_object(Bank_F050.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(Bank_F050.json, '$.id') as id,
+    get_json_object(Bank_F050.json, '$.favorite_count') as favorite_count,
+    get_json_object(Bank_F050.json, '$.coordinates') as coordinates,
+    get_json_object(Bank_F050.json, '$.id_str') as id_str,
+    get_json_object(Bank_F050.json, '$.indices') as indices,
+    get_json_object(Bank_F050.json, '$.type') as type,
+    get_json_object(Bank_F050.json, '$.hashtags') as hashtags,
+    get_json_object(Bank_F050.json, '$.user_mentions') as user_mentions,
+    get_json_object(Bank_F050.json, '$.screen_name') as screen_name,
+    get_json_object(Bank_F050.json, '$.name') as name,
+    get_json_object(Bank_F050.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(Bank_F050.json, '$.retweet_count') as retweet_count,
+    get_json_object(Bank_F050.json, '$.favorited') as favorited,
+    get_json_object(Bank_F050.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(Bank_F050.json, '$.user') as user,
+    get_json_object(Bank_F050.json, '$.followers_count') as followers_count,
+    get_json_object(Bank_F050.json, '$.statuses_count') as statuses_count,
+    get_json_object(Bank_F050.json, '$.description') as description,
+    get_json_object(Bank_F050.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(Bank_F050.json, '$.favourites_count') as favourites_count,
+    get_json_object(Bank_F050.json, '$.created_at') as created_at,
+    get_json_object(Bank_F050.json, '$.time_zone') as time_zone,
+    get_json_object(Bank_F050.json, '$.listed_count') as listed_count,
+    get_json_object(Bank_F050.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from Bank_F050;
+select * from Bank_F050_table limit 1;
+
+CREATE TABLE Bank_F051 (json string);
+LOAD DATA LOCAL INPATH 'banks-2-21-16.txt' INTO TABLE Bank_F051;
+
+drop table Bank_F051_table;
+create table Bank_F051_table as
+select
+    get_json_object(Bank_F051.json, '$.text') as text,
+    get_json_object(Bank_F051.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(Bank_F051.json, '$.id') as id,
+    get_json_object(Bank_F051.json, '$.favorite_count') as favorite_count,
+    get_json_object(Bank_F051.json, '$.coordinates') as coordinates,
+    get_json_object(Bank_F051.json, '$.id_str') as id_str,
+    get_json_object(Bank_F051.json, '$.indices') as indices,
+    get_json_object(Bank_F051.json, '$.type') as type,
+    get_json_object(Bank_F051.json, '$.hashtags') as hashtags,
+    get_json_object(Bank_F051.json, '$.user_mentions') as user_mentions,
+    get_json_object(Bank_F051.json, '$.screen_name') as screen_name,
+    get_json_object(Bank_F051.json, '$.name') as name,
+    get_json_object(Bank_F051.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(Bank_F051.json, '$.retweet_count') as retweet_count,
+    get_json_object(Bank_F051.json, '$.favorited') as favorited,
+    get_json_object(Bank_F051.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(Bank_F051.json, '$.user') as user,
+    get_json_object(Bank_F051.json, '$.followers_count') as followers_count,
+    get_json_object(Bank_F051.json, '$.statuses_count') as statuses_count,
+    get_json_object(Bank_F051.json, '$.description') as description,
+    get_json_object(Bank_F051.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(Bank_F051.json, '$.favourites_count') as favourites_count,
+    get_json_object(Bank_F051.json, '$.created_at') as created_at,
+    get_json_object(Bank_F051.json, '$.time_zone') as time_zone,
+    get_json_object(Bank_F051.json, '$.listed_count') as listed_count,
+    get_json_object(Bank_F051.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from Bank_F051;
+select * from Bank_F051_table limit 1;
+
+CREATE TABLE Bank_F052 (json string);
+LOAD DATA LOCAL INPATH 'betterbank-2-21-16.txt' INTO TABLE Bank_F052;
+
+drop table Bank_F052_table;
+create table Bank_F052_table as
+select
+    get_json_object(Bank_F052.json, '$.text') as text,
+    get_json_object(Bank_F052.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(Bank_F052.json, '$.id') as id,
+    get_json_object(Bank_F052.json, '$.favorite_count') as favorite_count,
+    get_json_object(Bank_F052.json, '$.coordinates') as coordinates,
+    get_json_object(Bank_F052.json, '$.id_str') as id_str,
+    get_json_object(Bank_F052.json, '$.indices') as indices,
+    get_json_object(Bank_F052.json, '$.type') as type,
+    get_json_object(Bank_F052.json, '$.hashtags') as hashtags,
+    get_json_object(Bank_F052.json, '$.user_mentions') as user_mentions,
+    get_json_object(Bank_F052.json, '$.screen_name') as screen_name,
+    get_json_object(Bank_F052.json, '$.name') as name,
+    get_json_object(Bank_F052.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(Bank_F052.json, '$.retweet_count') as retweet_count,
+    get_json_object(Bank_F052.json, '$.favorited') as favorited,
+    get_json_object(Bank_F052.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(Bank_F052.json, '$.user') as user,
+    get_json_object(Bank_F052.json, '$.followers_count') as followers_count,
+    get_json_object(Bank_F052.json, '$.statuses_count') as statuses_count,
+    get_json_object(Bank_F052.json, '$.description') as description,
+    get_json_object(Bank_F052.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(Bank_F052.json, '$.favourites_count') as favourites_count,
+    get_json_object(Bank_F052.json, '$.created_at') as created_at,
+    get_json_object(Bank_F052.json, '$.time_zone') as time_zone,
+    get_json_object(Bank_F052.json, '$.listed_count') as listed_count,
+    get_json_object(Bank_F052.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from Bank_F052;
+select * from Bank_F052_table limit 1;
+
+CREATE TABLE Bank_F053 (json string);
+LOAD DATA LOCAL INPATH 'canadianbanks-2-21-16.txt' INTO TABLE Bank_F053;
+
+drop table Bank_F053_table;
+create table Bank_F053_table as
+select
+    get_json_object(Bank_F053.json, '$.text') as text,
+    get_json_object(Bank_F053.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(Bank_F053.json, '$.id') as id,
+    get_json_object(Bank_F053.json, '$.favorite_count') as favorite_count,
+    get_json_object(Bank_F053.json, '$.coordinates') as coordinates,
+    get_json_object(Bank_F053.json, '$.id_str') as id_str,
+    get_json_object(Bank_F053.json, '$.indices') as indices,
+    get_json_object(Bank_F053.json, '$.type') as type,
+    get_json_object(Bank_F053.json, '$.hashtags') as hashtags,
+    get_json_object(Bank_F053.json, '$.user_mentions') as user_mentions,
+    get_json_object(Bank_F053.json, '$.screen_name') as screen_name,
+    get_json_object(Bank_F053.json, '$.name') as name,
+    get_json_object(Bank_F053.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(Bank_F053.json, '$.retweet_count') as retweet_count,
+    get_json_object(Bank_F053.json, '$.favorited') as favorited,
+    get_json_object(Bank_F053.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(Bank_F053.json, '$.user') as user,
+    get_json_object(Bank_F053.json, '$.followers_count') as followers_count,
+    get_json_object(Bank_F053.json, '$.statuses_count') as statuses_count,
+    get_json_object(Bank_F053.json, '$.description') as description,
+    get_json_object(Bank_F053.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(Bank_F053.json, '$.favourites_count') as favourites_count,
+    get_json_object(Bank_F053.json, '$.created_at') as created_at,
+    get_json_object(Bank_F053.json, '$.time_zone') as time_zone,
+    get_json_object(Bank_F053.json, '$.listed_count') as listed_count,
+    get_json_object(Bank_F053.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from Bank_F053;
+select * from Bank_F053_table limit 1;
+
+CREATE TABLE BMO_F054 (json string);
+LOAD DATA LOCAL INPATH 'BMO-2-21-16.txt' INTO TABLE BMO_F054;
+
+drop table BMO_F054_table;
+create table BMO_F054_table as
+select
+    get_json_object(BMO_F054.json, '$.text') as text,
+    get_json_object(BMO_F054.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(BMO_F054.json, '$.id') as id,
+    get_json_object(BMO_F054.json, '$.favorite_count') as favorite_count,
+    get_json_object(BMO_F054.json, '$.coordinates') as coordinates,
+    get_json_object(BMO_F054.json, '$.id_str') as id_str,
+    get_json_object(BMO_F054.json, '$.indices') as indices,
+    get_json_object(BMO_F054.json, '$.type') as type,
+    get_json_object(BMO_F054.json, '$.hashtags') as hashtags,
+    get_json_object(BMO_F054.json, '$.user_mentions') as user_mentions,
+    get_json_object(BMO_F054.json, '$.screen_name') as screen_name,
+    get_json_object(BMO_F054.json, '$.name') as name,
+    get_json_object(BMO_F054.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(BMO_F054.json, '$.retweet_count') as retweet_count,
+    get_json_object(BMO_F054.json, '$.favorited') as favorited,
+    get_json_object(BMO_F054.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(BMO_F054.json, '$.user') as user,
+    get_json_object(BMO_F054.json, '$.followers_count') as followers_count,
+    get_json_object(BMO_F054.json, '$.statuses_count') as statuses_count,
+    get_json_object(BMO_F054.json, '$.description') as description,
+    get_json_object(BMO_F054.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(BMO_F054.json, '$.favourites_count') as favourites_count,
+    get_json_object(BMO_F054.json, '$.created_at') as created_at,
+    get_json_object(BMO_F054.json, '$.time_zone') as time_zone,
+    get_json_object(BMO_F054.json, '$.listed_count') as listed_count,
+    get_json_object(BMO_F054.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from BMO_F054;
+select * from BMO_F054_table limit 1;
+
+CREATE TABLE CIBC_F055 (json string);
+LOAD DATA LOCAL INPATH 'CIBC-2-21-16.txt' INTO TABLE CIBC_F055;
+
+drop table CIBC_F055_table;
+create table CIBC_F055_table as
+select
+    get_json_object(CIBC_F055.json, '$.text') as text,
+    get_json_object(CIBC_F055.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(CIBC_F055.json, '$.id') as id,
+    get_json_object(CIBC_F055.json, '$.favorite_count') as favorite_count,
+    get_json_object(CIBC_F055.json, '$.coordinates') as coordinates,
+    get_json_object(CIBC_F055.json, '$.id_str') as id_str,
+    get_json_object(CIBC_F055.json, '$.indices') as indices,
+    get_json_object(CIBC_F055.json, '$.type') as type,
+    get_json_object(CIBC_F055.json, '$.hashtags') as hashtags,
+    get_json_object(CIBC_F055.json, '$.user_mentions') as user_mentions,
+    get_json_object(CIBC_F055.json, '$.screen_name') as screen_name,
+    get_json_object(CIBC_F055.json, '$.name') as name,
+    get_json_object(CIBC_F055.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(CIBC_F055.json, '$.retweet_count') as retweet_count,
+    get_json_object(CIBC_F055.json, '$.favorited') as favorited,
+    get_json_object(CIBC_F055.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(CIBC_F055.json, '$.user') as user,
+    get_json_object(CIBC_F055.json, '$.followers_count') as followers_count,
+    get_json_object(CIBC_F055.json, '$.statuses_count') as statuses_count,
+    get_json_object(CIBC_F055.json, '$.description') as description,
+    get_json_object(CIBC_F055.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(CIBC_F055.json, '$.favourites_count') as favourites_count,
+    get_json_object(CIBC_F055.json, '$.created_at') as created_at,
+    get_json_object(CIBC_F055.json, '$.time_zone') as time_zone,
+    get_json_object(CIBC_F055.json, '$.listed_count') as listed_count,
+    get_json_object(CIBC_F055.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from CIBC_F055;
+select * from CIBC_F055_table limit 1;
+
+CREATE TABLE PCF_F056 (json string);
+LOAD DATA LOCAL INPATH 'pcfinancial-2-21-16.txt' INTO TABLE PCF_F056;
+
+drop table PCF_F056_table;
+create table PCF_F056_table as
+select
+    get_json_object(PCF_F056.json, '$.text') as text,
+    get_json_object(PCF_F056.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(PCF_F056.json, '$.id') as id,
+    get_json_object(PCF_F056.json, '$.favorite_count') as favorite_count,
+    get_json_object(PCF_F056.json, '$.coordinates') as coordinates,
+    get_json_object(PCF_F056.json, '$.id_str') as id_str,
+    get_json_object(PCF_F056.json, '$.indices') as indices,
+    get_json_object(PCF_F056.json, '$.type') as type,
+    get_json_object(PCF_F056.json, '$.hashtags') as hashtags,
+    get_json_object(PCF_F056.json, '$.user_mentions') as user_mentions,
+    get_json_object(PCF_F056.json, '$.screen_name') as screen_name,
+    get_json_object(PCF_F056.json, '$.name') as name,
+    get_json_object(PCF_F056.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(PCF_F056.json, '$.retweet_count') as retweet_count,
+    get_json_object(PCF_F056.json, '$.favorited') as favorited,
+    get_json_object(PCF_F056.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(PCF_F056.json, '$.user') as user,
+    get_json_object(PCF_F056.json, '$.followers_count') as followers_count,
+    get_json_object(PCF_F056.json, '$.statuses_count') as statuses_count,
+    get_json_object(PCF_F056.json, '$.description') as description,
+    get_json_object(PCF_F056.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(PCF_F056.json, '$.favourites_count') as favourites_count,
+    get_json_object(PCF_F056.json, '$.created_at') as created_at,
+    get_json_object(PCF_F056.json, '$.time_zone') as time_zone,
+    get_json_object(PCF_F056.json, '$.listed_count') as listed_count,
+    get_json_object(PCF_F056.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from PCF_F056;
+select * from PCF_F056_table limit 1;
+
+CREATE TABLE RBC_F057 (json string);
+LOAD DATA LOCAL INPATH 'rbc_canada-2-21-16.txt' INTO TABLE RBC_F057;
+
+drop table RBC_F057_table;
+create table RBC_F057_table as
+select
+    get_json_object(RBC_F057.json, '$.text') as text,
+    get_json_object(RBC_F057.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(RBC_F057.json, '$.id') as id,
+    get_json_object(RBC_F057.json, '$.favorite_count') as favorite_count,
+    get_json_object(RBC_F057.json, '$.coordinates') as coordinates,
+    get_json_object(RBC_F057.json, '$.id_str') as id_str,
+    get_json_object(RBC_F057.json, '$.indices') as indices,
+    get_json_object(RBC_F057.json, '$.type') as type,
+    get_json_object(RBC_F057.json, '$.hashtags') as hashtags,
+    get_json_object(RBC_F057.json, '$.user_mentions') as user_mentions,
+    get_json_object(RBC_F057.json, '$.screen_name') as screen_name,
+    get_json_object(RBC_F057.json, '$.name') as name,
+    get_json_object(RBC_F057.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(RBC_F057.json, '$.retweet_count') as retweet_count,
+    get_json_object(RBC_F057.json, '$.favorited') as favorited,
+    get_json_object(RBC_F057.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(RBC_F057.json, '$.user') as user,
+    get_json_object(RBC_F057.json, '$.followers_count') as followers_count,
+    get_json_object(RBC_F057.json, '$.statuses_count') as statuses_count,
+    get_json_object(RBC_F057.json, '$.description') as description,
+    get_json_object(RBC_F057.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(RBC_F057.json, '$.favourites_count') as favourites_count,
+    get_json_object(RBC_F057.json, '$.created_at') as created_at,
+    get_json_object(RBC_F057.json, '$.time_zone') as time_zone,
+    get_json_object(RBC_F057.json, '$.listed_count') as listed_count,
+    get_json_object(RBC_F057.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from RBC_F057;
+select * from RBC_F057_table limit 1;
+
+CREATE TABLE RBC_F058 (json string);
+LOAD DATA LOCAL INPATH 'royalbank-2-21-16.txt' INTO TABLE RBC_F058;
+
+drop table RBC_F058_table;
+create table RBC_F058_table as
+select
+    get_json_object(RBC_F058.json, '$.text') as text,
+    get_json_object(RBC_F058.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(RBC_F058.json, '$.id') as id,
+    get_json_object(RBC_F058.json, '$.favorite_count') as favorite_count,
+    get_json_object(RBC_F058.json, '$.coordinates') as coordinates,
+    get_json_object(RBC_F058.json, '$.id_str') as id_str,
+    get_json_object(RBC_F058.json, '$.indices') as indices,
+    get_json_object(RBC_F058.json, '$.type') as type,
+    get_json_object(RBC_F058.json, '$.hashtags') as hashtags,
+    get_json_object(RBC_F058.json, '$.user_mentions') as user_mentions,
+    get_json_object(RBC_F058.json, '$.screen_name') as screen_name,
+    get_json_object(RBC_F058.json, '$.name') as name,
+    get_json_object(RBC_F058.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(RBC_F058.json, '$.retweet_count') as retweet_count,
+    get_json_object(RBC_F058.json, '$.favorited') as favorited,
+    get_json_object(RBC_F058.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(RBC_F058.json, '$.user') as user,
+    get_json_object(RBC_F058.json, '$.followers_count') as followers_count,
+    get_json_object(RBC_F058.json, '$.statuses_count') as statuses_count,
+    get_json_object(RBC_F058.json, '$.description') as description,
+    get_json_object(RBC_F058.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(RBC_F058.json, '$.favourites_count') as favourites_count,
+    get_json_object(RBC_F058.json, '$.created_at') as created_at,
+    get_json_object(RBC_F058.json, '$.time_zone') as time_zone,
+    get_json_object(RBC_F058.json, '$.listed_count') as listed_count,
+    get_json_object(RBC_F058.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from RBC_F058;
+select * from RBC_F058_table limit 1;
+
+CREATE TABLE Scot_F059 (json string);
+LOAD DATA LOCAL INPATH 'scotiabank-2-21-16.txt' INTO TABLE Scot_F059;
+
+drop table Scot_F059_table;
+create table Scot_F059_table as
+select
+    get_json_object(Scot_F059.json, '$.text') as text,
+    get_json_object(Scot_F059.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(Scot_F059.json, '$.id') as id,
+    get_json_object(Scot_F059.json, '$.favorite_count') as favorite_count,
+    get_json_object(Scot_F059.json, '$.coordinates') as coordinates,
+    get_json_object(Scot_F059.json, '$.id_str') as id_str,
+    get_json_object(Scot_F059.json, '$.indices') as indices,
+    get_json_object(Scot_F059.json, '$.type') as type,
+    get_json_object(Scot_F059.json, '$.hashtags') as hashtags,
+    get_json_object(Scot_F059.json, '$.user_mentions') as user_mentions,
+    get_json_object(Scot_F059.json, '$.screen_name') as screen_name,
+    get_json_object(Scot_F059.json, '$.name') as name,
+    get_json_object(Scot_F059.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(Scot_F059.json, '$.retweet_count') as retweet_count,
+    get_json_object(Scot_F059.json, '$.favorited') as favorited,
+    get_json_object(Scot_F059.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(Scot_F059.json, '$.user') as user,
+    get_json_object(Scot_F059.json, '$.followers_count') as followers_count,
+    get_json_object(Scot_F059.json, '$.statuses_count') as statuses_count,
+    get_json_object(Scot_F059.json, '$.description') as description,
+    get_json_object(Scot_F059.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(Scot_F059.json, '$.favourites_count') as favourites_count,
+    get_json_object(Scot_F059.json, '$.created_at') as created_at,
+    get_json_object(Scot_F059.json, '$.time_zone') as time_zone,
+    get_json_object(Scot_F059.json, '$.listed_count') as listed_count,
+    get_json_object(Scot_F059.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from Scot_F059;
+select * from Scot_F059_table limit 1;
+
+CREATE TABLE Tang_F060 (json string);
+LOAD DATA LOCAL INPATH 'tangerinebank-2-21-16.txt' INTO TABLE Tang_F060;
+
+drop table Tang_F060_table;
+create table Tang_F060_table as
+select
+    get_json_object(Tang_F060.json, '$.text') as text,
+    get_json_object(Tang_F060.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(Tang_F060.json, '$.id') as id,
+    get_json_object(Tang_F060.json, '$.favorite_count') as favorite_count,
+    get_json_object(Tang_F060.json, '$.coordinates') as coordinates,
+    get_json_object(Tang_F060.json, '$.id_str') as id_str,
+    get_json_object(Tang_F060.json, '$.indices') as indices,
+    get_json_object(Tang_F060.json, '$.type') as type,
+    get_json_object(Tang_F060.json, '$.hashtags') as hashtags,
+    get_json_object(Tang_F060.json, '$.user_mentions') as user_mentions,
+    get_json_object(Tang_F060.json, '$.screen_name') as screen_name,
+    get_json_object(Tang_F060.json, '$.name') as name,
+    get_json_object(Tang_F060.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(Tang_F060.json, '$.retweet_count') as retweet_count,
+    get_json_object(Tang_F060.json, '$.favorited') as favorited,
+    get_json_object(Tang_F060.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(Tang_F060.json, '$.user') as user,
+    get_json_object(Tang_F060.json, '$.followers_count') as followers_count,
+    get_json_object(Tang_F060.json, '$.statuses_count') as statuses_count,
+    get_json_object(Tang_F060.json, '$.description') as description,
+    get_json_object(Tang_F060.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(Tang_F060.json, '$.favourites_count') as favourites_count,
+    get_json_object(Tang_F060.json, '$.created_at') as created_at,
+    get_json_object(Tang_F060.json, '$.time_zone') as time_zone,
+    get_json_object(Tang_F060.json, '$.listed_count') as listed_count,
+    get_json_object(Tang_F060.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from Tang_F060;
+select * from Tang_F060_table limit 1;
+
+CREATE TABLE TD_F061 (json string);
+LOAD DATA LOCAL INPATH 'td_bank-2-21-16.txt' INTO TABLE TD_F061;
+
+drop table TD_F061_table;
+create table TD_F061_table as
+select
+    get_json_object(TD_F061.json, '$.text') as text,
+    get_json_object(TD_F061.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(TD_F061.json, '$.id') as id,
+    get_json_object(TD_F061.json, '$.favorite_count') as favorite_count,
+    get_json_object(TD_F061.json, '$.coordinates') as coordinates,
+    get_json_object(TD_F061.json, '$.id_str') as id_str,
+    get_json_object(TD_F061.json, '$.indices') as indices,
+    get_json_object(TD_F061.json, '$.type') as type,
+    get_json_object(TD_F061.json, '$.hashtags') as hashtags,
+    get_json_object(TD_F061.json, '$.user_mentions') as user_mentions,
+    get_json_object(TD_F061.json, '$.screen_name') as screen_name,
+    get_json_object(TD_F061.json, '$.name') as name,
+    get_json_object(TD_F061.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(TD_F061.json, '$.retweet_count') as retweet_count,
+    get_json_object(TD_F061.json, '$.favorited') as favorited,
+    get_json_object(TD_F061.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(TD_F061.json, '$.user') as user,
+    get_json_object(TD_F061.json, '$.followers_count') as followers_count,
+    get_json_object(TD_F061.json, '$.statuses_count') as statuses_count,
+    get_json_object(TD_F061.json, '$.description') as description,
+    get_json_object(TD_F061.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(TD_F061.json, '$.favourites_count') as favourites_count,
+    get_json_object(TD_F061.json, '$.created_at') as created_at,
+    get_json_object(TD_F061.json, '$.time_zone') as time_zone,
+    get_json_object(TD_F061.json, '$.listed_count') as listed_count,
+    get_json_object(TD_F061.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from TD_F061;
+select * from TD_F061_table limit 1;
+
+CREATE TABLE TD_F062 (json string);
+LOAD DATA LOCAL INPATH 'td_canada-2-21-16.txt' INTO TABLE TD_F062;
+
+drop table TD_F062_table;
+create table TD_F062_table as
+select
+    get_json_object(TD_F062.json, '$.text') as text,
+    get_json_object(TD_F062.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(TD_F062.json, '$.id') as id,
+    get_json_object(TD_F062.json, '$.favorite_count') as favorite_count,
+    get_json_object(TD_F062.json, '$.coordinates') as coordinates,
+    get_json_object(TD_F062.json, '$.id_str') as id_str,
+    get_json_object(TD_F062.json, '$.indices') as indices,
+    get_json_object(TD_F062.json, '$.type') as type,
+    get_json_object(TD_F062.json, '$.hashtags') as hashtags,
+    get_json_object(TD_F062.json, '$.user_mentions') as user_mentions,
+    get_json_object(TD_F062.json, '$.screen_name') as screen_name,
+    get_json_object(TD_F062.json, '$.name') as name,
+    get_json_object(TD_F062.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(TD_F062.json, '$.retweet_count') as retweet_count,
+    get_json_object(TD_F062.json, '$.favorited') as favorited,
+    get_json_object(TD_F062.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(TD_F062.json, '$.user') as user,
+    get_json_object(TD_F062.json, '$.followers_count') as followers_count,
+    get_json_object(TD_F062.json, '$.statuses_count') as statuses_count,
+    get_json_object(TD_F062.json, '$.description') as description,
+    get_json_object(TD_F062.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(TD_F062.json, '$.favourites_count') as favourites_count,
+    get_json_object(TD_F062.json, '$.created_at') as created_at,
+    get_json_object(TD_F062.json, '$.time_zone') as time_zone,
+    get_json_object(TD_F062.json, '$.listed_count') as listed_count,
+    get_json_object(TD_F062.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from TD_F062;
+select * from TD_F062_table limit 1;
+
+CREATE TABLE TD_F063 (json string);
+LOAD DATA LOCAL INPATH 'tdcanadatrust-2-21-16.txt' INTO TABLE TD_F063;
+
+drop table TD_F063_table;
+create table TD_F063_table as
+select
+    get_json_object(TD_F063.json, '$.text') as text,
+    get_json_object(TD_F063.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(TD_F063.json, '$.id') as id,
+    get_json_object(TD_F063.json, '$.favorite_count') as favorite_count,
+    get_json_object(TD_F063.json, '$.coordinates') as coordinates,
+    get_json_object(TD_F063.json, '$.id_str') as id_str,
+    get_json_object(TD_F063.json, '$.indices') as indices,
+    get_json_object(TD_F063.json, '$.type') as type,
+    get_json_object(TD_F063.json, '$.hashtags') as hashtags,
+    get_json_object(TD_F063.json, '$.user_mentions') as user_mentions,
+    get_json_object(TD_F063.json, '$.screen_name') as screen_name,
+    get_json_object(TD_F063.json, '$.name') as name,
+    get_json_object(TD_F063.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(TD_F063.json, '$.retweet_count') as retweet_count,
+    get_json_object(TD_F063.json, '$.favorited') as favorited,
+    get_json_object(TD_F063.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(TD_F063.json, '$.user') as user,
+    get_json_object(TD_F063.json, '$.followers_count') as followers_count,
+    get_json_object(TD_F063.json, '$.statuses_count') as statuses_count,
+    get_json_object(TD_F063.json, '$.description') as description,
+    get_json_object(TD_F063.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(TD_F063.json, '$.favourites_count') as favourites_count,
+    get_json_object(TD_F063.json, '$.created_at') as created_at,
+    get_json_object(TD_F063.json, '$.time_zone') as time_zone,
+    get_json_object(TD_F063.json, '$.listed_count') as listed_count,
+    get_json_object(TD_F063.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from TD_F063;
+select * from TD_F063_table limit 1;
+
+CREATE TABLE TD_F064 (json string);
+LOAD DATA LOCAL INPATH 'TDCT-2-21-16.txt' INTO TABLE TD_F064;
+
+drop table TD_F064_table;
+create table TD_F064_table as
+select
+    get_json_object(TD_F064.json, '$.text') as text,
+    get_json_object(TD_F064.json, '$.in_reply_to_user_id') as in_reply_to_user_id,
+    get_json_object(TD_F064.json, '$.id') as id,
+    get_json_object(TD_F064.json, '$.favorite_count') as favorite_count,
+    get_json_object(TD_F064.json, '$.coordinates') as coordinates,
+    get_json_object(TD_F064.json, '$.id_str') as id_str,
+    get_json_object(TD_F064.json, '$.indices') as indices,
+    get_json_object(TD_F064.json, '$.type') as type,
+    get_json_object(TD_F064.json, '$.hashtags') as hashtags,
+    get_json_object(TD_F064.json, '$.user_mentions') as user_mentions,
+    get_json_object(TD_F064.json, '$.screen_name') as screen_name,
+    get_json_object(TD_F064.json, '$.name') as name,
+    get_json_object(TD_F064.json, '$.in_reply_to_screen_name') as in_reply_to_screen_name,
+    get_json_object(TD_F064.json, '$.retweet_count') as retweet_count,
+    get_json_object(TD_F064.json, '$.favorited') as favorited,
+    get_json_object(TD_F064.json, '$.retweeted_status') as retweeted_status,
+    get_json_object(TD_F064.json, '$.user') as user,
+    get_json_object(TD_F064.json, '$.followers_count') as followers_count,
+    get_json_object(TD_F064.json, '$.statuses_count') as statuses_count,
+    get_json_object(TD_F064.json, '$.description') as description,
+    get_json_object(TD_F064.json, '$.geo_enabled') as geo_enabled,
+    get_json_object(TD_F064.json, '$.favourites_count') as favourites_count,
+    get_json_object(TD_F064.json, '$.created_at') as created_at,
+    get_json_object(TD_F064.json, '$.time_zone') as time_zone,
+    get_json_object(TD_F064.json, '$.listed_count') as listed_count,
+    get_json_object(TD_F064.json, '$.in_reply_to_user_id_str') as in_reply_to_user_id_str
+from TD_F064;
+select * from TD_F064_table limit 1;
