@@ -47,3 +47,86 @@ hadoop fs -put tdcanadatrust-2-7-16.txt /user/lab
 hadoop fs -put TDCT-1-26-16.txt /user/lab
 hadoop fs -put TDCT-2-14-16.txt /user/lab
 hadoop fs -put TDCT-2-7-16.txt /user/lab
+hadoop fs -put banking-2-21-16.txt /user/lab
+hadoop fs -put bankingfail-2-21-16.txt /user/lab
+hadoop fs -put banks-2-21-16.txt /user/lab
+hadoop fs -put betterbank-2-21-16.txt /user/lab
+hadoop fs -put canadianbanks-2-21-16.txt /user/lab
+hadoop fs -put BMO-2-21-16.txt /user/lab
+hadoop fs -put CIBC-2-21-16.txt /user/lab
+hadoop fs -put pcfinancial-2-21-16.txt /user/lab
+hadoop fs -put rbc_canada-2-21-16.txt /user/lab
+hadoop fs -put royalbank-2-21-16.txt /user/lab
+hadoop fs -put scotiabank-2-21-16.txt /user/lab
+hadoop fs -put tangerinebank-2-21-16.txt /user/lab
+hadoop fs -put td_bank-2-21-16.txt /user/lab
+hadoop fs -put td_canada-2-21-16.txt /user/lab
+hadoop fs -put tdcanadatrust-2-21-16.txt /user/lab
+hadoop fs -put TDCT-2-21-16.txt /user/lab
+
+#Check
+hadoop fs -cat /user/lab/banking-1-26-16.txt | head -n 1
+hadoop fs -cat /user/lab/banking-2-15-16.txt | head -n 1
+hadoop fs -cat /user/lab/banking-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/bankingfail-1-27-16.txt | head -n 1
+hadoop fs -cat /user/lab/bankingfail-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/Banks-1-26-16.txt | head -n 1
+hadoop fs -cat /user/lab/banks-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/banks-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/banks2-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/betterbank-1-27-16.txt | head -n 1
+hadoop fs -cat /user/lab/betterbank-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/canadianbanks-1-27-16.txt | head -n 1
+hadoop fs -cat /user/lab/canadianbanks-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/canadianbanks-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/wishbanks-1-27-16.txt | head -n 1
+hadoop fs -cat /user/lab/BMO-1-26-16.txt | head -n 1
+hadoop fs -cat /user/lab/BMO-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/BMO-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/CIBC-1-26-16.txt | head -n 1
+hadoop fs -cat /user/lab/CIBC-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/CIBC-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/pcfinancial-1-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/pcfinancial-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/pcfinancial-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/rbc_canada-1-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/rbc_canada-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/rbc_canada-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/royalbank-1-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/royalbank-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/royalbank-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/Scotiabank-1-26-16.txt | head -n 1
+hadoop fs -cat /user/lab/scotiabank-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/scotiabank-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/tangerinebank-1-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/tangerinebank-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/tangerinebank-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/td_bank-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/td_bank-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/td_banks-1-27-16.txt | head -n 1
+hadoop fs -cat /user/lab/td_canada-1-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/td_canada-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/td_canada-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/tdcanadatrust-1-26-16.txt | head -n 1
+hadoop fs -cat /user/lab/tdcanadatrust-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/tdcanadatrust-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/TDCT-1-26-16.txt | head -n 1
+hadoop fs -cat /user/lab/TDCT-2-14-16.txt | head -n 1
+hadoop fs -cat /user/lab/TDCT-2-7-16.txt | head -n 1
+hadoop fs -cat /user/lab/banking-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/bankingfail-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/banks-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/betterbank-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/canadianbanks-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/BMO-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/CIBC-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/pcfinancial-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/rbc_canada-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/royalbank-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/scotiabank-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/tangerinebank-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/td_bank-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/td_canada-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/tdcanadatrust-2-21-16.txt | head -n 1
+hadoop fs -cat /user/lab/TDCT-2-21-16.txt | head -n 1
+
