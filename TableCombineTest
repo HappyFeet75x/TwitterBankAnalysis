@@ -1,0 +1,14 @@
+#Combining Tables
+
+create table TestTable2 as
+select *
+from BMO_F016_table
+union all
+select *
+from BMO_F017_table
+union all
+select *
+from BMO_F018_table
+union all
+select *
+from BMO_F054_table;
