@@ -130,3 +130,173 @@ hadoop fs -cat /user/lab/td_canada-2-21-16.txt | head -n 1
 hadoop fs -cat /user/lab/tdcanadatrust-2-21-16.txt | head -n 1
 hadoop fs -cat /user/lab/TDCT-2-21-16.txt | head -n 1
 
+#Import Files
+hadoop fs -put banking-2-28-16.txt /user/lab
+hadoop fs -put bankingfail-2-28-16.txt /user/lab
+hadoop fs -put banks-2-28-16.txt /user/lab
+hadoop fs -put betterbank-2-28-16.txt /user/lab
+hadoop fs -put BMO-2-28-16.txt /user/lab
+hadoop fs -put canadianbanks-2-28-16.txt /user/lab
+hadoop fs -put CIBC-2-28-16.txt /user/lab
+hadoop fs -put pcfinancial-2-28-16.txt /user/lab
+hadoop fs -put rbc_canada-2-28-16.txt /user/lab
+hadoop fs -put royalbank-2-28-16.txt /user/lab
+hadoop fs -put scotiabank-2-28-16.txt /user/lab
+hadoop fs -put tangerinebank-2-28-16.txt /user/lab
+hadoop fs -put td_bank-2-28-16.txt /user/lab
+hadoop fs -put td_canada-2-28-16.txt /user/lab
+hadoop fs -put tdcanadatrust-2-28-16.txt /user/lab
+hadoop fs -put TDCT-2-28-16.txt /user/lab
+hadoop fs -put bankingfail-3-6-16.txt /user/lab
+hadoop fs -put royalbank-3-6-16.txt /user/lab
+hadoop fs -put TDCT-3-6-16.txt /user/lab
+hadoop fs -put betterbank-3-6-16.txt /user/lab
+hadoop fs -put canadianbanks-3-6-16.txt /user/lab
+hadoop fs -put pcfinancial-3-6-16.txt /user/lab
+hadoop fs -put tdcanadatrust-3-6-16.txt /user/lab
+hadoop fs -put rbc_canada-3-6-16.txt /user/lab
+hadoop fs -put tangerinebank-3-6-16.txt /user/lab
+hadoop fs -put td_bank-3-6-16.txt /user/lab
+hadoop fs -put CIBC-3-6-16.txt /user/lab
+hadoop fs -put scotiabank-3-6-16.txt /user/lab
+hadoop fs -put BMO-3-6-16.txt /user/lab
+hadoop fs -put td_canada-3-6-16.txt /user/lab
+hadoop fs -put banking-3-6-16.txt /user/lab
+hadoop fs -put banks-3-6-16.txt /user/lab
+
+#Check
+hadoop fs -cat /user/lab/banking-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/bankingfail-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/banks-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/betterbank-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/BMO-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/canadianbanks-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/CIBC-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/pcfinancial-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/rbc_canada-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/royalbank-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/scotiabank-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/tangerinebank-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/td_bank-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/td_canada-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/tdcanadatrust-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/TDCT-2-28-16.txt | head -n 1
+hadoop fs -cat /user/lab/bankingfail-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/royalbank-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/TDCT-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/betterbank-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/canadianbanks-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/pcfinancial-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/tdcanadatrust-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/rbc_canada-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/tangerinebank-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/td_bank-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/CIBC-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/scotiabank-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/BMO-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/td_canada-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/banking-3-6-16.txt | head -n 1
+hadoop fs -cat /user/lab/banks-3-6-16.txt | head -n 1
+
+#Drop Tables
+DROP TABLE TD_F065;
+DROP TABLE TD_F066;
+DROP TABLE TD_F067;
+DROP TABLE TD_F068;
+DROP TABLE TD_F069;
+DROP TABLE TD_F070;
+DROP TABLE TD_F071;
+DROP TABLE TD_F072;
+DROP TABLE TD_F073;
+DROP TABLE TD_F074;
+DROP TABLE TD_F075;
+DROP TABLE TD_F076;
+DROP TABLE TD_F077;
+DROP TABLE TD_F078;
+DROP TABLE TD_F079;
+DROP TABLE TD_F080;
+DROP TABLE Bank_F081;
+DROP TABLE RBC_F082;
+DROP TABLE TD_F083;
+DROP TABLE Bank_F084;
+DROP TABLE Bank_F085;
+DROP TABLE PCF_F086;
+DROP TABLE TD_F087;
+DROP TABLE RBC_F088;
+DROP TABLE Tang_F089;
+DROP TABLE TD_F090;
+DROP TABLE CiBC_F091;
+DROP TABLE Scot_F092;
+DROP TABLE BMO_F093;
+DROP TABLE TD_F094;
+DROP TABLE Bank_F095;
+DROP TABLE Bank_F096;
+
+#Create Tables
+CREATE TABLE TD_F065 (json string);
+CREATE TABLE TD_F066 (json string);
+CREATE TABLE TD_F067 (json string);
+CREATE TABLE TD_F068 (json string);
+CREATE TABLE TD_F069 (json string);
+CREATE TABLE TD_F070 (json string);
+CREATE TABLE TD_F071 (json string);
+CREATE TABLE TD_F072 (json string);
+CREATE TABLE TD_F073 (json string);
+CREATE TABLE TD_F074 (json string);
+CREATE TABLE TD_F075 (json string);
+CREATE TABLE TD_F076 (json string);
+CREATE TABLE TD_F077 (json string);
+CREATE TABLE TD_F078 (json string);
+CREATE TABLE TD_F079 (json string);
+CREATE TABLE TD_F080 (json string);
+CREATE TABLE Bank_F081 (json string);
+CREATE TABLE RBC_F082 (json string);
+CREATE TABLE TD_F083 (json string);
+CREATE TABLE Bank_F084 (json string);
+CREATE TABLE Bank_F085 (json string);
+CREATE TABLE PCF_F086 (json string);
+CREATE TABLE TD_F087 (json string);
+CREATE TABLE RBC_F088 (json string);
+CREATE TABLE Tang_F089 (json string);
+CREATE TABLE TD_F090 (json string);
+CREATE TABLE CiBC_F091 (json string);
+CREATE TABLE Scot_F092 (json string);
+CREATE TABLE BMO_F093 (json string);
+CREATE TABLE TD_F094 (json string);
+CREATE TABLE Bank_F095 (json string);
+CREATE TABLE Bank_F096 (json string);
+
+#Load Data
+LOAD DATA LOCAL INPATH 'banking-2-28-16.txt' INTO TABLE TD_F065;
+LOAD DATA LOCAL INPATH 'bankingfail-2-28-16.txt' INTO TABLE TD_F066;
+LOAD DATA LOCAL INPATH 'banks-2-28-16.txt' INTO TABLE TD_F067;
+LOAD DATA LOCAL INPATH 'betterbank-2-28-16.txt' INTO TABLE TD_F068;
+LOAD DATA LOCAL INPATH 'BMO-2-28-16.txt' INTO TABLE TD_F069;
+LOAD DATA LOCAL INPATH 'canadianbanks-2-28-16.txt' INTO TABLE TD_F070;
+LOAD DATA LOCAL INPATH 'CIBC-2-28-16.txt' INTO TABLE TD_F071;
+LOAD DATA LOCAL INPATH 'pcfinancial-2-28-16.txt' INTO TABLE TD_F072;
+LOAD DATA LOCAL INPATH 'rbc_canada-2-28-16.txt' INTO TABLE TD_F073;
+LOAD DATA LOCAL INPATH 'royalbank-2-28-16.txt' INTO TABLE TD_F074;
+LOAD DATA LOCAL INPATH 'scotiabank-2-28-16.txt' INTO TABLE TD_F075;
+LOAD DATA LOCAL INPATH 'tangerinebank-2-28-16.txt' INTO TABLE TD_F076;
+LOAD DATA LOCAL INPATH 'td_bank-2-28-16.txt' INTO TABLE TD_F077;
+LOAD DATA LOCAL INPATH 'td_canada-2-28-16.txt' INTO TABLE TD_F078;
+LOAD DATA LOCAL INPATH 'tdcanadatrust-2-28-16.txt' INTO TABLE TD_F079;
+LOAD DATA LOCAL INPATH 'TDCT-2-28-16.txt' INTO TABLE TD_F080;
+LOAD DATA LOCAL INPATH 'bankingfail-3-6-16.txt' INTO TABLE Bank_F081;
+LOAD DATA LOCAL INPATH 'royalbank-3-6-16.txt' INTO TABLE RBC_F082;
+LOAD DATA LOCAL INPATH 'TDCT-3-6-16.txt' INTO TABLE TD_F083;
+LOAD DATA LOCAL INPATH 'betterbank-3-6-16.txt' INTO TABLE Bank_F084;
+LOAD DATA LOCAL INPATH 'canadianbanks-3-6-16.txt' INTO TABLE Bank_F085;
+LOAD DATA LOCAL INPATH 'pcfinancial-3-6-16.txt' INTO TABLE PCF_F086;
+LOAD DATA LOCAL INPATH 'tdcanadatrust-3-6-16.txt' INTO TABLE TD_F087;
+LOAD DATA LOCAL INPATH 'rbc_canada-3-6-16.txt' INTO TABLE RBC_F088;
+LOAD DATA LOCAL INPATH 'tangerinebank-3-6-16.txt' INTO TABLE Tang_F089;
+LOAD DATA LOCAL INPATH 'td_bank-3-6-16.txt' INTO TABLE TD_F090;
+LOAD DATA LOCAL INPATH 'CIBC-3-6-16.txt' INTO TABLE CiBC_F091;
+LOAD DATA LOCAL INPATH 'scotiabank-3-6-16.txt' INTO TABLE Scot_F092;
+LOAD DATA LOCAL INPATH 'BMO-3-6-16.txt' INTO TABLE BMO_F093;
+LOAD DATA LOCAL INPATH 'td_canada-3-6-16.txt' INTO TABLE TD_F094;
+LOAD DATA LOCAL INPATH 'banking-3-6-16.txt' INTO TABLE Bank_F095;
+LOAD DATA LOCAL INPATH 'banks-3-6-16.txt' INTO TABLE Bank_F096;
+
