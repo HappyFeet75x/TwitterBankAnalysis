@@ -1,0 +1,7 @@
+CREATE TABLE wc_lexicon AS
+SELECT A.word, A.cnt
+FROM 
+     CIBC_wc A 
+        inner join 
+     lexicon B
+ON (A.id = B.id and A.ts = B.ts and A.haversinedist = B.min_haversine);
