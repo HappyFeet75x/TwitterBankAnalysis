@@ -1,0 +1,4 @@
+hadoop fs -rm /user/lab/Lexicon.csv
+hadoop fs -put Lexicon.csv /user/lab
+hadoop fs -cat /user/lab/Lexicon.csv | head -n 2
+
