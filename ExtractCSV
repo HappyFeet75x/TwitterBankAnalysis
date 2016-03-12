@@ -1,0 +1,8 @@
+hive -e 'select * from Banks_lwc' > /home/lab/Banks_lwc.csv
+hive -e 'select * from BMO_lwc' > /home/lab/BMO_lwc.csv
+hive -e 'select * from BMO_lwc' > /home/lab/BMO_lwc.csv
+hive -e 'select * from PCF_lwc' > /home/lab/PCF_lwc.csv
+hive -e 'select * from RBC_lwc' > /home/lab/RBC_lwc.csv
+hive -e 'select * from Scotia_lwc' > /home/lab/Scotia_lwc.csv
+hive -e 'select * from Tangerine_lwc' > /home/lab/Tangerine_lwc.csv
+hive -e 'select * from TD_lwc' > /home/lab/TD_lwc.csv
