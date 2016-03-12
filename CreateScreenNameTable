@@ -1,0 +1,47 @@
+CREATE TABLE Banks_SNTable as
+SELECT screen_name, COUNT(1) AS cnt FROM
+Banks_table
+GROUP BY screen_name
+ORDER BY cnt DESC;
+
+CREATE TABLE BMO_SNTable as
+SELECT screen_name, COUNT(1) AS cnt FROM
+BMO_table
+GROUP BY screen_name
+ORDER BY cnt DESC;
+
+CREATE TABLE CIBC_SNTable as
+SELECT screen_name, COUNT(1) AS cnt FROM
+CIBC_table
+GROUP BY screen_name
+ORDER BY cnt DESC;
+
+CREATE TABLE PCF_SNTable as
+SELECT screen_name, COUNT(1) AS cnt FROM
+PCF_table
+GROUP BY screen_name
+ORDER BY cnt DESC;
+
+CREATE TABLE RBC_SNTable as
+SELECT screen_name, COUNT(1) AS cnt FROM
+RBC_table
+GROUP BY screen_name
+ORDER BY cnt DESC;
+
+CREATE TABLE Scotia_SNTable as
+SELECT screen_name, COUNT(1) AS cnt FROM
+Scotia_table
+GROUP BY screen_name
+ORDER BY cnt DESC;
+
+CREATE TABLE Tangerine_SNTable as
+SELECT screen_name, COUNT(1) AS cnt FROM
+Tangerine_table
+GROUP BY screen_name
+ORDER BY cnt DESC;
+
+CREATE TABLE TD_SNTable as
+SELECT screen_name, COUNT(1) AS cnt FROM
+TD_table
+GROUP BY screen_name
+ORDER BY cnt DESC;
