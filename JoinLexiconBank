@@ -1,7 +1,7 @@
 DROP TABLE Banks_lwc;
 CREATE TABLE
 Banks_lwc AS
-SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity
+SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity, CONCAT(B.Type, B.priorpolarity)
 FROM 
 Banks_wc A
 INNER JOIN
@@ -12,7 +12,7 @@ ON (A.word = B.Word1)
 DROP TABLE BMO_lwc;
 CREATE TABLE
 BMO_lwc AS
-SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity
+SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity, CONCAT(B.Type, B.priorpolarity)
 FROM 
 BMO_wc A
 INNER JOIN
@@ -23,7 +23,7 @@ ON (A.word = B.Word1)
 DROP TABLE CIBC_lwc;
 CREATE TABLE
 CIBC_lwc AS
-SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity
+SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity, CONCAT(B.Type, B.priorpolarity)
 FROM 
 CIBC_wc A
 INNER JOIN
@@ -34,7 +34,7 @@ ON (A.word = B.Word1)
 DROP TABLE PCF_lwc;
 CREATE TABLE
 PCF_lwc AS
-SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity
+SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity, CONCAT(B.Type, B.priorpolarity)
 FROM 
 PCF_wc A
 INNER JOIN
@@ -45,7 +45,7 @@ ON (A.word = B.Word1)
 DROP TABLE RBC_lwc;
 CREATE TABLE
 RBC_lwc AS
-SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity
+SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity, CONCAT(B.Type, B.priorpolarity)
 FROM 
 RBC_wc A
 INNER JOIN
@@ -56,7 +56,7 @@ ON (A.word = B.Word1)
 DROP TABLE Scotia_lwc;
 CREATE TABLE
 Scotia_lwc AS
-SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity
+SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity, CONCAT(B.Type, B.priorpolarity)
 FROM 
 Scotia_wc A
 INNER JOIN
@@ -67,7 +67,7 @@ ON (A.word = B.Word1)
 DROP TABLE Tangerine_lwc;
 CREATE TABLE
 Tangerine_lwc AS
-SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity
+SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity, CONCAT(B.Type, B.priorpolarity)
 FROM 
 Tangerine_wc A
 INNER JOIN
@@ -78,7 +78,7 @@ ON (A.word = B.Word1)
 DROP TABLE TD_lwc;
 CREATE TABLE
 TD_lwc AS
-SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity
+SELECT DISTINCT(A.word), A.cnt, B.Type, B.priorpolarity, CONCAT(B.Type, B.priorpolarity)
 FROM 
 TD_wc A
 INNER JOIN
