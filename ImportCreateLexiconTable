@@ -2,3 +2,14 @@ hadoop fs -rm /user/lab/Lexicon.csv
 hadoop fs -put Lexicon.csv /user/lab
 hadoop fs -cat /user/lab/Lexicon.csv | head -n 2
 
+DROP TABLE lex_table;
+CREATE TABLE lex_table(
+Type STRING,
+Word1 STRING,
+pos1 STRING,
+stemmed1 STRING,
+priorpolarity STRING
+)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ","
+STORED AS TEXTFILE;
+LOAD DATA INPATH '/user/lab/Lexicon.csv' OVERWRITE INTO TABLE lex_table;
