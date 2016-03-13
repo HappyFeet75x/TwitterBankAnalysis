@@ -300,3 +300,75 @@ LOAD DATA LOCAL INPATH 'td_canada-3-6-16.txt' INTO TABLE TD_F094;
 LOAD DATA LOCAL INPATH 'banking-3-6-16.txt' INTO TABLE Bank_F095;
 LOAD DATA LOCAL INPATH 'banks-3-6-16.txt' INTO TABLE Bank_F096;
 
+#Import Files
+hadoop fs -put bankingfail-3-13-16.txt /user/lab
+hadoop fs -put royalbank-3-13-16.txt /user/lab
+hadoop fs -put TDCT-3-13-16.txt /user/lab
+hadoop fs -put betterbank-3-13-16.txt /user/lab
+hadoop fs -put canadianbanks-3-13-16.txt /user/lab
+hadoop fs -put pcfinancial-3-13-16.txt /user/lab
+hadoop fs -put tdcanadatrust-3-13-16.txt /user/lab
+hadoop fs -put rbc_canada-3-13-16.txt /user/lab
+hadoop fs -put tangerinebank-3-13-16.txt /user/lab
+hadoop fs -put td_bank-3-13-16.txt /user/lab
+hadoop fs -put CIBC-3-13-16.txt /user/lab
+hadoop fs -put scotiabank-3-13-16.txt /user/lab
+hadoop fs -put BMO-3-13-16.txt /user/lab
+hadoop fs -put td_canada-3-13-16.txt /user/lab
+hadoop fs -put banking-3-13-16.txt /user/lab
+hadoop fs -put banks-3-13-16.txt /user/lab
+
+#Drop Tables
+DROP TABLE Bank_F097;
+DROP TABLE RBC_F098;
+DROP TABLE TD_F099;
+DROP TABLE Bank_F100;
+DROP TABLE Bank_F101;
+DROP TABLE PCF_F102;
+DROP TABLE TD_F103;
+DROP TABLE RBC_F104;
+DROP TABLE Tang_F105;
+DROP TABLE TD_F106;
+DROP TABLE CIBC_F107;
+DROP TABLE Scot_F108;
+DROP TABLE BMO_F109;
+DROP TABLE TD_F110;
+DROP TABLE Bank_F111;
+DROP TABLE Bank_F112;
+
+#Create Tables
+CREATE TABLE Bank_F097 (json string);
+CREATE TABLE RBC_F098 (json string);
+CREATE TABLE TD_F099 (json string);
+CREATE TABLE Bank_F100 (json string);
+CREATE TABLE Bank_F101 (json string);
+CREATE TABLE PCF_F102 (json string);
+CREATE TABLE TD_F103 (json string);
+CREATE TABLE RBC_F104 (json string);
+CREATE TABLE Tang_F105 (json string);
+CREATE TABLE TD_F106 (json string);
+CREATE TABLE CIBC_F107 (json string);
+CREATE TABLE Scot_F108 (json string);
+CREATE TABLE BMO_F109 (json string);
+CREATE TABLE TD_F110 (json string);
+CREATE TABLE Bank_F111 (json string);
+CREATE TABLE Bank_F112 (json string);
+
+#Load Data
+LOAD DATA LOCAL INPATH 'bankingfail-3-13-16.txt' INTO TABLE Bank_F097;
+LOAD DATA LOCAL INPATH 'royalbank-3-13-16.txt' INTO TABLE RBC_F098;
+LOAD DATA LOCAL INPATH 'TDCT-3-13-16.txt' INTO TABLE TD_F099;
+LOAD DATA LOCAL INPATH 'betterbank-3-13-16.txt' INTO TABLE Bank_F100;
+LOAD DATA LOCAL INPATH 'canadianbanks-3-13-16.txt' INTO TABLE Bank_F101;
+LOAD DATA LOCAL INPATH 'pcfinancial-3-13-16.txt' INTO TABLE PCF_F102;
+LOAD DATA LOCAL INPATH 'tdcanadatrust-3-13-16.txt' INTO TABLE TD_F103;
+LOAD DATA LOCAL INPATH 'rbc_canada-3-13-16.txt' INTO TABLE RBC_F104;
+LOAD DATA LOCAL INPATH 'tangerinebank-3-13-16.txt' INTO TABLE Tang_F105;
+LOAD DATA LOCAL INPATH 'td_bank-3-13-16.txt' INTO TABLE TD_F106;
+LOAD DATA LOCAL INPATH 'CIBC-3-13-16.txt' INTO TABLE CIBC_F107;
+LOAD DATA LOCAL INPATH 'scotiabank-3-13-16.txt' INTO TABLE Scot_F108;
+LOAD DATA LOCAL INPATH 'BMO-3-13-16.txt' INTO TABLE BMO_F109;
+LOAD DATA LOCAL INPATH 'td_canada-3-13-16.txt' INTO TABLE TD_F110;
+LOAD DATA LOCAL INPATH 'banking-3-13-16.txt' INTO TABLE Bank_F111;
+LOAD DATA LOCAL INPATH 'banks-3-13-16.txt' INTO TABLE Bank_F112;
+
