@@ -1,0 +1,87 @@
+DROP TABLE Banks_lwc;
+CREATE TABLE
+Banks_lwc AS
+SELECT A.word, A.cnt, B.Type, B.Polarity, B.PolType
+FROM 
+Banks_wc A
+INNER JOIN
+lex_table B
+ON (A.word = B.Word)
+;
+
+DROP TABLE BMO_lwc;
+CREATE TABLE
+BMO_lwc AS
+SELECT A.word, A.cnt, B.Type, B.Polarity, B.PolType
+FROM 
+BMO_wc A
+INNER JOIN
+lex_table B
+ON (A.word = B.Word)
+;
+
+DROP TABLE CIBC_lwc;
+CREATE TABLE
+CIBC_lwc AS
+SELECT A.word, A.cnt, B.Type, B.Polarity, B.PolType
+FROM 
+CIBC_wc A
+INNER JOIN
+lex_table B
+ON (A.word = B.Word)
+;
+
+DROP TABLE PCF_lwc;
+CREATE TABLE
+PCF_lwc AS
+SELECT A.word, A.cnt, B.Type, B.Polarity, B.PolType
+FROM 
+PCF_wc A
+INNER JOIN
+lex_table B
+ON (A.word = B.Word)
+;
+
+DROP TABLE RBC_lwc;
+CREATE TABLE
+RBC_lwc AS
+SELECT A.word, A.cnt, B.Type, B.Polarity, B.PolType
+FROM 
+RBC_wc A
+INNER JOIN
+lex_table B
+ON (A.word = B.Word)
+;
+
+DROP TABLE Scotia_lwc;
+CREATE TABLE
+Scotia_lwc AS
+SELECT A.word, A.cnt, B.Type, B.Polarity, B.PolType
+FROM 
+Scotia_wc A
+INNER JOIN
+lex_table B
+ON (A.word = B.Word)
+;
+
+DROP TABLE Tangerine_lwc;
+CREATE TABLE
+Tangerine_lwc AS
+SELECT A.word, A.cnt, B.Type, B.Polarity, B.PolType
+FROM 
+Tangerine_wc A
+INNER JOIN
+lex_table B
+ON (A.word = B.Word)
+;
+
+DROP TABLE TD_lwc;
+CREATE TABLE
+TD_lwc AS
+SELECT A.word, A.cnt, B.Type, B.Polarity, B.PolType
+FROM 
+TD_wc A
+INNER JOIN
+lex_table B
+ON (A.word = B.Word)
+;
