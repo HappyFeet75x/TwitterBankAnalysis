@@ -1,0 +1,72 @@
+DROP TABLE Banks_PT;
+CREATE TABLE
+Banks_PT AS
+SELECT PolType, SUM(cnt) FROM
+Banks_lwc
+GROUP BY PolType
+ORDER BY PolType DESC;
+
+DROP TABLE BMO_PT;
+CREATE TABLE
+BMO_PT AS
+SELECT PolType, SUM(cnt) FROM
+BMO_lwc
+GROUP BY PolType
+ORDER BY PolType DESC;
+
+DROP TABLE CIBC_PT;
+CREATE TABLE
+CIBC_PT AS
+SELECT PolType, SUM(cnt) FROM
+CIBC_lwc
+GROUP BY PolType
+ORDER BY PolType DESC;
+
+DROP TABLE PCF_PT;
+CREATE TABLE
+PCF_PT AS
+SELECT PolType, SUM(cnt) FROM
+PCF_lwc
+GROUP BY PolType
+ORDER BY PolType DESC;
+
+DROP TABLE RBC_PT;
+CREATE TABLE
+RBC_PT AS
+SELECT PolType, SUM(cnt) FROM
+RBC_lwc
+GROUP BY PolType
+ORDER BY PolType DESC;
+
+DROP TABLE Scotia_PT;
+CREATE TABLE
+Scotia_PT AS
+SELECT PolType, SUM(cnt) FROM
+Scotia_lwc
+GROUP BY PolType
+ORDER BY PolType DESC;
+
+DROP TABLE Tangerine_PT;
+CREATE TABLE
+Tangerine_PT AS
+SELECT PolType, SUM(cnt) FROM
+Tangerine_lwc
+GROUP BY PolType
+ORDER BY PolType DESC;
+
+DROP TABLE TD_PT;
+CREATE TABLE
+TD_PT AS
+SELECT PolType, SUM(cnt) FROM
+TD_lwc
+GROUP BY PolType
+ORDER BY PolType DESC;
+
+hive -e 'select * from Banks_PT' > /home/lab/Banks_PT.csv
+hive -e 'select * from BMO_PT' > /home/lab/BMO_PT.csv
+hive -e 'select * from CIBC_PT' > /home/lab/CIBC_PT.csv
+hive -e 'select * from PCF_PT' > /home/lab/PCF_PT.csv
+hive -e 'select * from RBC_PT' > /home/lab/RBC_PT.csv
+hive -e 'select * from Scotia_PT' > /home/lab/Scotia_PT.csv
+hive -e 'select * from Tangerine_PT' > /home/lab/Tangerine_PT.csv
+hive -e 'select * from TD_PT' > /home/lab/TD_PT.csv
