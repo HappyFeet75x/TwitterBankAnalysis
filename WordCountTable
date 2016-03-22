@@ -1,0 +1,48 @@
+DROP TABLE BMO_wc;
+CREATE TABLE BMO_wc AS
+SELECT word, COUNT(1) AS cnt FROM
+(SELECT EXPLODE(SPLIT(LOWER(text), '\\s+')) AS word FROM BMO_ATable) w
+GROUP BY word
+ORDER BY cnt DESC;
+
+DROP TABLE CIBC_wc;
+CREATE TABLE CIBC_wc AS
+SELECT word, COUNT(1) AS cnt FROM
+(SELECT EXPLODE(SPLIT(LOWER(text), '\\s+')) AS word FROM CIBC_ATable) w
+GROUP BY word
+ORDER BY cnt DESC;
+
+DROP TABLE PCF_wc;
+CREATE TABLE PCF_wc AS
+SELECT word, COUNT(1) AS cnt FROM
+(SELECT EXPLODE(SPLIT(LOWER(text), '\\s+')) AS word FROM PCF_ATable) w
+GROUP BY word
+ORDER BY cnt DESC;
+
+DROP TABLE RBC_wc;
+CREATE TABLE RBC_wc AS
+SELECT word, COUNT(1) AS cnt FROM
+(SELECT EXPLODE(SPLIT(LOWER(text), '\\s+')) AS word FROM RBC_ATable) w
+GROUP BY word
+ORDER BY cnt DESC;
+
+DROP TABLE Scotia_wc;
+CREATE TABLE Scotia_wc AS
+SELECT word, COUNT(1) AS cnt FROM
+(SELECT EXPLODE(SPLIT(LOWER(text), '\\s+')) AS word FROM Scotia_ATable) w
+GROUP BY word
+ORDER BY cnt DESC;
+
+DROP TABLE Tangerine_wc;
+CREATE TABLE Tangerine_wc AS
+SELECT word, COUNT(1) AS cnt FROM
+(SELECT EXPLODE(SPLIT(LOWER(text), '\\s+')) AS word FROM Tangerine_ATable) w
+GROUP BY word
+ORDER BY cnt DESC;
+
+DROP TABLE TD_wc;
+CREATE TABLE TD_wc AS
+SELECT word, COUNT(1) AS cnt FROM
+(SELECT EXPLODE(SPLIT(LOWER(text), '\\s+')) AS word FROM TD_ATable) w
+GROUP BY word
+ORDER BY cnt DESC;
