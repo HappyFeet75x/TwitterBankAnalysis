@@ -1,6 +1,6 @@
 hadoop fs -rm /user/lab/LexiconV2.csv
-hadoop fs -put LexiconV2.csv /user/lab
-hadoop fs -cat /user/lab/LexiconV2.csv | head -n 2
+hadoop fs -put LexiconV3.csv /user/lab
+hadoop fs -cat /user/lab/LexiconV3.csv | head -n 2
 
 DROP TABLE lex_table;
 CREATE TABLE lex_table(
@@ -11,4 +11,4 @@ PolType STRING
 )
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ","
 STORED AS TEXTFILE;
-LOAD DATA INPATH '/user/lab/LexiconV2.csv' OVERWRITE INTO TABLE lex_table;
+LOAD DATA INPATH '/user/lab/LexiconV3.csv' OVERWRITE INTO TABLE lex_table;
