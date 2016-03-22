@@ -5,8 +5,8 @@ hadoop fs -cat /user/lab/LexiconV2.csv | head -n 2
 DROP TABLE lex_table;
 CREATE TABLE lex_table(
 Word STRING,
-Polarity STRING,
 Type STRING,
+Polarity STRING,
 PolType STRING
 )
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ","
